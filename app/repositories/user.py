@@ -16,6 +16,13 @@ class UserRepository:
 
         return self.session.exec(statement).first()
 
+    def update_user(self, user: User) -> User | None:
+        self.session.add(user)
+        self.session.commit()
+        self.session.refresh(user)
+
+        return user
+
     def create(self, user: User) -> User:
         self.session.add(user)
         self.session.commit()

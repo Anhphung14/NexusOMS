@@ -27,7 +27,3 @@ class UserResponse(SQLModel):
     email: EmailStr
     full_name: str | None = None
     created_at: datetime
-
-class TokenResponse(SQLModel):
-    access_token: str
-    token_type: str = 'bearer'

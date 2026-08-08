@@ -9,6 +9,5 @@ class User(SQLModel, table=True):
     full_name: str
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
-    updated_at: datetime
     is_active: bool = Field(default=True)
     is_verified: bool = Field(default=False)
